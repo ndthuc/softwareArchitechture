@@ -1,0 +1,10 @@
+C:\Users\doanthuc\Desktop\HK1933\Software Architecture\TIN415DE01-HomeworkW03\TIN415DE01-HomeworkW03\bin\Debug\TIN415DE01-HomeworkW03.exe.config
+C:\Users\doanthuc\Desktop\HK1933\Software Architecture\TIN415DE01-HomeworkW03\TIN415DE01-HomeworkW03\bin\Debug\TIN415DE01-HomeworkW03.exe
+C:\Users\doanthuc\Desktop\HK1933\Software Architecture\TIN415DE01-HomeworkW03\TIN415DE01-HomeworkW03\bin\Debug\TIN415DE01-HomeworkW03.pdb
+C:\Users\doanthuc\Desktop\HK1933\Software Architecture\TIN415DE01-HomeworkW03\TIN415DE01-HomeworkW03\obj\Debug\TIN415DE01-HomeworkW03.csprojAssemblyReference.cache
+C:\Users\doanthuc\Desktop\HK1933\Software Architecture\TIN415DE01-HomeworkW03\TIN415DE01-HomeworkW03\obj\Debug\TIN415DE01_HomeworkW03.GUI.ArtForm.resources
+C:\Users\doanthuc\Desktop\HK1933\Software Architecture\TIN415DE01-HomeworkW03\TIN415DE01-HomeworkW03\obj\Debug\TIN415DE01_HomeworkW03.Properties.Resources.resources
+C:\Users\doanthuc\Desktop\HK1933\Software Architecture\TIN415DE01-HomeworkW03\TIN415DE01-HomeworkW03\obj\Debug\TIN415DE01-HomeworkW03.csproj.GenerateResource.cache
+C:\Users\doanthuc\Desktop\HK1933\Software Architecture\TIN415DE01-HomeworkW03\TIN415DE01-HomeworkW03\obj\Debug\TIN415DE01-HomeworkW03.csproj.CoreCompileInputs.cache
+C:\Users\doanthuc\Desktop\HK1933\Software Architecture\TIN415DE01-HomeworkW03\TIN415DE01-HomeworkW03\obj\Debug\TIN415DE01-HomeworkW03.exe
+C:\Users\doanthuc\Desktop\HK1933\Software Architecture\TIN415DE01-HomeworkW03\TIN415DE01-HomeworkW03\obj\Debug\TIN415DE01-HomeworkW03.pdb

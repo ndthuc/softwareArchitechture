@@ -1,0 +1,10 @@
+C:\Users\doanthuc\Desktop\HK1933\Software Architecture\TIN415DE01-Project\TIN415DE01-Project\bin\Debug\TIN415DE01-Project.exe.config
+C:\Users\doanthuc\Desktop\HK1933\Software Architecture\TIN415DE01-Project\TIN415DE01-Project\bin\Debug\TIN415DE01-Project.exe
+C:\Users\doanthuc\Desktop\HK1933\Software Architecture\TIN415DE01-Project\TIN415DE01-Project\bin\Debug\TIN415DE01-Project.pdb
+C:\Users\doanthuc\Desktop\HK1933\Software Architecture\TIN415DE01-Project\TIN415DE01-Project\obj\Debug\TIN415DE01-Project.csprojAssemblyReference.cache
+C:\Users\doanthuc\Desktop\HK1933\Software Architecture\TIN415DE01-Project\TIN415DE01-Project\obj\Debug\TIN415DE01_Project.GUI.ArtForm.resources
+C:\Users\doanthuc\Desktop\HK1933\Software Architecture\TIN415DE01-Project\TIN415DE01-Project\obj\Debug\TIN415DE01_Project.Properties.Resources.resources
+C:\Users\doanthuc\Desktop\HK1933\Software Architecture\TIN415DE01-Project\TIN415DE01-Project\obj\Debug\TIN415DE01-Project.csproj.GenerateResource.cache
+C:\Users\doanthuc\Desktop\HK1933\Software Architecture\TIN415DE01-Project\TIN415DE01-Project\obj\Debug\TIN415DE01-Project.csproj.CoreCompileInputs.cache
+C:\Users\doanthuc\Desktop\HK1933\Software Architecture\TIN415DE01-Project\TIN415DE01-Project\obj\Debug\TIN415DE01-Project.exe
+C:\Users\doanthuc\Desktop\HK1933\Software Architecture\TIN415DE01-Project\TIN415DE01-Project\obj\Debug\TIN415DE01-Project.pdb
