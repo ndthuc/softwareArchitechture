@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="C:\Users\doanthuc\Desktop\HK1933\softwareArchitechture\TIN415DE01-HomeworkW04-3tiers-3layers\TIN415DE01-HomeworkW04-3tiers-3layers\obj\Release\Package\PackageTmp" />
+  <setAcl path="C:\Users\doanthuc\Desktop\HK1933\softwareArchitechture\TIN415DE01-HomeworkW04-3tiers-3layers\TIN415DE01-HomeworkW04-3tiers-3layers\obj\Release\Package\PackageTmp" setAclResourceType="Directory" />
+  <setAcl path="C:\Users\doanthuc\Desktop\HK1933\softwareArchitechture\TIN415DE01-HomeworkW04-3tiers-3layers\TIN415DE01-HomeworkW04-3tiers-3layers\obj\Release\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
+</sitemanifest>

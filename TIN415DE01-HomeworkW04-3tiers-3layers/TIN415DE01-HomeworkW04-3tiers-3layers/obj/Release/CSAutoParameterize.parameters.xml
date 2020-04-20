@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="tin415de2171609ConnectionString-Web.config Connection String" description="tin415de2171609ConnectionString Connection String used in web.config by the application to access the database." defaultValue="Data Source=den1.mssql7.gear.host;Initial Catalog=tin415de2171609;Persist Security Info=True;User ID=tin415de2171609;Password=Ni8luMJ-T~vI" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\doanthuc\\Desktop\\HK1933\\softwareArchitechture\\TIN415DE01-HomeworkW04-3tiers-3layers\\TIN415DE01-HomeworkW04-3tiers-3layers\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='tin415de2171609ConnectionString']/@connectionString" />
+  </parameter>
+</parameters>
