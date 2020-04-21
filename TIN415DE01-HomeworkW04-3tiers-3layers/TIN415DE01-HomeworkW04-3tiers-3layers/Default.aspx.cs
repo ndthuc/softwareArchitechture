@@ -14,19 +14,22 @@ namespace TIN415DE01_HomeworkW04_3tiers_3layers
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            List<Art_Materials_n_Tool> artItems = new ArtBUS().GetAll();
-            GridView1.DataSource = artItems;
-            GridView1.DataBind();
+            if (!Page.IsPostBack)
+            {
+                List<Art_Materials_n_Tool> artItems = new ArtBUS().GetAll();
+                GridView1.DataSource = artItems;
+                GridView1.DataBind();
+            }
         }
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
+
             codeTextBox.Text = GridView1.SelectedRow.Cells[1].Text;
             nameTextBox.Text = GridView1.SelectedRow.Cells[2].Text;
             categoryTextBox.Text = GridView1.SelectedRow.Cells[3].Text;
             priceTextBox.Text = GridView1.SelectedRow.Cells[4].Text;
             brandTextBox.Text = GridView1.SelectedRow.Cells[5].Text;
-            
         }
 
         protected void searchButton_Click(object sender, EventArgs e)
@@ -60,11 +63,9 @@ namespace TIN415DE01_HomeworkW04_3tiers_3layers
                 List<Art_Materials_n_Tool> artItems = new ArtBUS().GetAll();
                 GridView1.DataSource = artItems;
                 GridView1.DataBind();
-                resultLabel.Text = "Add new item successed!!!";
             }
             else
             {
-                resultLabel.Text = "Add FAIL! Something wrong!!!";
             }
         }
 
@@ -92,11 +93,9 @@ namespace TIN415DE01_HomeworkW04_3tiers_3layers
                 List<Art_Materials_n_Tool> artItems = new ArtBUS().GetAll();
                 GridView1.DataSource = artItems;
                 GridView1.DataBind();
-                resultLabel.Text = "Update item successed!!!";
             }
             else
             {
-                resultLabel.Text = "Update FAIL! Something wrong!!!";
             }
         }
 
@@ -110,11 +109,9 @@ namespace TIN415DE01_HomeworkW04_3tiers_3layers
                 List<Art_Materials_n_Tool> artItems = new ArtBUS().GetAll();
                 GridView1.DataSource = artItems;
                 GridView1.DataBind();
-                resultLabel.Text = "Delete item successed!!!";
             }
             else
             {
-                resultLabel.Text = "Delete FAIL! Something wrong!!!";
             }
         }
     }

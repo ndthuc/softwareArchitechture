@@ -148,15 +148,6 @@ namespace TIN415DE01_HomeworkW04_3tiers_3layers {
         protected global::System.Web.UI.WebControls.TextBox brandTextBox;
         
         /// <summary>
-        /// resultLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label resultLabel;
-        
-        /// <summary>
         /// addButton control.
         /// </summary>
         /// <remarks>

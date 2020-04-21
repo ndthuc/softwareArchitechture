@@ -16,6 +16,14 @@
         float: left;
     }
 </style>
+    
+<%--<script>
+$(document).ready(function () {
+            $("table[id*=GridView1] tr+tr").click(function () {
+                __doPostBack('<%= searchButton.ClientID %>', "OnClick")
+            });
+        });
+</script>--%>
 <body>
     <form id="form1" runat="server">
         <fieldset>
@@ -79,11 +87,12 @@
                         </td>
                     </tr>
                 </table>
-                <asp:Label ID="resultLabel" runat="server" Text="Result here"></asp:Label>
                 <br />
                 <br />
-                <asp:Button ID="addButton" runat="server" Text="ADD" OnClick="addButton_Click" />
-                <asp:Button ID="updateButton" runat="server" Text="UPDATE" OnClick="updateButton_Click" />
+                <asp:Button ID="addButton" runat="server" Text="ADD" OnClick="addButton_Click" 
+                    OnClientClick ="return alert('You have added an item!!!')"/>
+                <asp:Button ID="updateButton" runat="server" Text="UPDATE" OnClick="updateButton_Click" 
+                    OnClientClick ="return alert('You have updated an item!!!')"/>
                 <asp:Button ID="deleteButton" runat="server" Text="DELETE" OnClick="deleteButton_Click"
                     OnClientClick="return confirm('Are you sure?')" />
             </div>
