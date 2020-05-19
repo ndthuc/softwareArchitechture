@@ -8,9 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using AppShare;
-
-namespace AppClient
+namespace ArtClient
 {
     public partial class Form1 : Form
     {
@@ -19,12 +17,10 @@ namespace AppClient
             InitializeComponent();
         }
 
-        private static IArtBUS artBUS = (IArtBUS)Activator.GetObject(typeof(IArtBUS), "tcp://10.104.20.211:1234/artBUS");
-                    
         private void Form1_Load(object sender, EventArgs e)
         {
-            List<Art_Materials_n_Tool> artItems = artBUS.GetAll();
-
+            gearhost.ArtService service = new gearhost.ArtService();
+            List<gearhost.Art_Materials_n_Tool> artItems = service.GetAll().ToList();
             dataGridView1.DataSource = artItems;
         }
 
@@ -35,7 +31,10 @@ namespace AppClient
             String category = categoryTextBox.Text.Trim();
             int price = int.Parse(priceTextBox.Text.Trim());
             String brand = brandTextBox.Text.Trim();
-            Art_Materials_n_Tool newArtItem = new Art_Materials_n_Tool()
+
+            gearhost.ArtService service = new gearhost.ArtService();
+
+            gearhost.Art_Materials_n_Tool newArtItem = new gearhost.Art_Materials_n_Tool()
             {
                 Code = 0,
                 Name = name,
@@ -44,11 +43,11 @@ namespace AppClient
                 Brand = brand
             };
 
-            bool result = artBUS.AddNewIntem(newArtItem);
+            bool result = service.AddNewIntem(newArtItem);
             if (result)
             {
                 MessageBox.Show("You have added a new art item to your database!!!");
-                List<Art_Materials_n_Tool> artItems = artBUS.GetAll();
+                List<gearhost.Art_Materials_n_Tool> artItems = service.GetAll().ToList();
                 dataGridView1.DataSource = artItems;
             }
             else
@@ -59,8 +58,10 @@ namespace AppClient
 
         private void searchButton_Click(object sender, EventArgs e)
         {
+            gearhost.ArtService service = new gearhost.ArtService();
+
             String keyword = search.Text.Trim();
-            List<Art_Materials_n_Tool> artItems = artBUS.Search(keyword);
+            List<gearhost.Art_Materials_n_Tool> artItems = service.Search(keyword).ToList();
             dataGridView1.DataSource = artItems;
         }
 
@@ -73,7 +74,9 @@ namespace AppClient
             int price = int.Parse(priceTextBox.Text.Trim());
             String brand = brandTextBox.Text.Trim();
 
-            Art_Materials_n_Tool updatedItem = new Art_Materials_n_Tool()
+            gearhost.ArtService service = new gearhost.ArtService();
+
+            gearhost.Art_Materials_n_Tool updatedItem = new gearhost.Art_Materials_n_Tool()
             {
                 Code = code,
                 Name = name,
@@ -84,11 +87,11 @@ namespace AppClient
             //MessageBox.Show(updatedItem.Code.ToString());
             //MessageBox.Show(updatedItem.Name);
 
-            bool result = artBUS.UpdateItem(updatedItem);
+            bool result = service.UpdateItem(updatedItem);
             if (result)
             {
                 MessageBox.Show("You have updated a art item to your database!!!");
-                List<Art_Materials_n_Tool> artItems = artBUS.GetAll();
+                List<gearhost.Art_Materials_n_Tool> artItems = service.GetAll().ToList();
                 dataGridView1.DataSource = artItems;
             }
             else
@@ -102,6 +105,8 @@ namespace AppClient
             dataGridView1.CurrentRow.Selected = true;
             int code = int.Parse(codeTextBox.Text);
 
+            gearhost.ArtService service = new gearhost.ArtService();
+
             string message = "Are you sure you want to delete this row?";
             string caption = "Delete Row";
             var res = MessageBox.Show(message, caption, MessageBoxButtons.YesNo);
@@ -111,11 +116,11 @@ namespace AppClient
             }
             else //DialogResult.Yes
             {
-                bool result = artBUS.DeleteItem(code);
+                bool result = service.DeleteItem(code);
                 if (result)
                 {
-                    MessageBox.Show("You have deleted a art item to your database!!!");
-                    List<Art_Materials_n_Tool> artItems = artBUS.GetAll();
+                    MessageBox.Show("You have deleted a art item from your database!!!");
+                    List<gearhost.Art_Materials_n_Tool> artItems = service.GetAll().ToList();
                     dataGridView1.DataSource = artItems;
                 }
                 else
