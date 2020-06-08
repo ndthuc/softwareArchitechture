@@ -65,11 +65,12 @@
                 .then((res) => {
                     var result = res.data;
                     if (result) {
+                        alert("Add Successful!!!");
                         getAll();
                     } else {
-                        alert("sorry, something wrong!!! can`t add new item!!!")
+                        alert("sorry, something wrong!!! can`t add new item!!!");
                     }
-                })
+                });
         }
 
         function updateItem() {
@@ -86,9 +87,10 @@
                 .then((res) => {
                     var result = res.data;
                     if (result) {
+                        alert("Update Successful!!!");
                         getAll();
                     } else {
-                        alert("sorry, something wrong!!! can`t update item!!!")
+                        alert("sorry, something wrong!!! can`t update item!!!");
                     }
                 });
         }
@@ -97,14 +99,15 @@
             if (confirm("Are you sure?")) {
                 var code = document.getElementById("Code").value;
                 axios.delete(cors + domain + "api/arts/" + code)
-                .then((res) => {
-                    var result = res.data;
-                    if (result) {
-                        getAll();
-                    } else {
-                        alert("sorry, something wrong!!! can`t delete item!!!")
-                    } 
-                });
+                    .then((res) => {
+                        var result = res.data;
+                        if (result) {
+                            alert("Delete Successful!!!");
+                            getAll();
+                        } else {
+                            alert("sorry, something wrong!!! can`t delete item!!!");
+                        }
+                    });
             }
         }
 
@@ -113,10 +116,10 @@
 
             if (keyword.length > 0) {
                 axios.get(cors + domain + "api/arts/search/" + keyword)
-                .then((res) =>{
-                    var items = res.data;
-                    renderArtItemsList(items);
-                });
+                    .then((res) => {
+                        var items = res.data;
+                        renderArtItemsList(items);
+                    });
             } else {
                 getAll();
             }
@@ -125,32 +128,103 @@
 </head>
 
 <body onload="page_load()">
-    <h1>LIST ITEM</h1>
+    <h1>Hello World!!!</h1>
+    <div id="container">
+        <fieldset>
+            <legend>Art Materials and Tools</legend>
+            <table>
+                <td class="search-text">
+                    <input type="text" name="" id="Keyword">
+                </td>
+                <td>
+                    <button onclick="searchItems()">SEARCH</button>
+                </td>
+            </table>
 
-    <input type="text" name="" id="Keyword">
-    <button onclick="searchItems()">SEARCH</button>
+            <table id="listItems" border="1"></table>
+        </fieldset>
+        <fieldset>
+            <legend>Controls</legend>
+            <table id="details">
+                <tr>
+                    <td>
+                        <label for="id">Code</label>
+                    </td>
+                    <td class="input-text">
+                        <input type="text" name="item id" id="Code" disabled="disabled">
+                    </td>
+                    <td colspan="5">
+                        <button onclick="addNewItem()">Add New</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="name">Name</label>
+                    </td>
+                    <td class="input-text">
+                        <input type="text" name="item name" id="Name">
+                    </td>
+                    <td>
+                        <button onclick="updateItem()">Update</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="category">Category</label>
+                    </td>
+                    <td class="input-text">
+                        <input type="text" name="item category" id="Category">
+                    </td>
+                    <td>
+                        <button onclick="deleteItem()">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="price">Price</label>
+                    </td>
+                    <td class="input-text">
+                        <input type="text" name="item price" id="Price">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="brand">Brand</label>
+                    </td>
+                    <td class="input-text">
+                        <input type="text" name="item brand" id="Brand">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </div>
 
-    <table id="listItems" border="1"></table>
-
-    <h1>Details</h1>
-    <label for="id">Code</label>
-    <input type="text" name="item id" id="Code" disabled = "disabled">
-    <br>
-    <label for="name">Name</label>
-    <input type="text" name="item name" id="Name">
-    <br>
-    <label for="category">Category</label>
-    <input type="text" name="item category" id="Category">
-    <br>
-    <label for="price">Price</label>
-    <input type="text" name="item price" id="Price">
-    <br>
-    <label for="brand">Brand</label>
-    <input type="text" name="item brand" id="Brand">
-    <br>
-    <button onclick="addNewItem()">Add New</button>
-    <button onclick="updateItem()">Update</button>
-    <button onclick="deleteItem()">Delete</button>
 </body>
+<style>
+    div#container {
+        width: fit-content;
+    }
+    td.search-text{
+        width: 600px;
+    }
+    td.input-text {
+        width: 500px;
+    }
+    input {
+        margin: 2px;
+        width: 100%;
+        height: 25px;
+        box-sizing: border-box;
+    }
+    button{
+        width: 75px;
+        margin-left: 10px;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+    table{
+        margin: auto;
+    }
+</style>
 
 </html>
