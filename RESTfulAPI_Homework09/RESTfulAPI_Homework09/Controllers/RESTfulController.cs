@@ -54,6 +54,22 @@ namespace RESTfulAPI_Homework09.Controllers
             Art_Materials_n_Tool item = new ArtDAO().SelectByCode(code);
             return item;
         }
+        [HttpPost]
+        [Route("api/users")]
+        public User Register(RegisterUser user)
+        {
+            User newUser = new UserDAO().Insert(user);
+            return newUser;
+        }
+
+        [HttpPost]
+        [Route("api/users")]
+        public LoginUser Login(LoginUser user)
+        {
+            LoginUser loginUser = new UserDAO().GetUser(user);
+            return loginUser;
+        }
+
         //// GET api/<controller>
         //public IEnumerable<string> Get()
         //{

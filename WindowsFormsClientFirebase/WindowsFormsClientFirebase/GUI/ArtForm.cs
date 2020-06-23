@@ -65,10 +65,11 @@ namespace WindowsFormsClientFirebase.GUI
 
         private async void searchButton_Click(object sender, EventArgs e)
         {
-            String keyword = label1.Text.Trim();
+            String keyword = search.Text.Trim();
             //List<Book> books = await new BookBUS1().Search(keyword);
-            List<ArtItem> books = await new ArtBUS().Search(keyword);
-            dataGridView1.BeginInvoke(new MethodInvoker(delegate { dataGridView1.DataSource = books; })); // set asynchronous datasource
+            List<ArtItem> artItems = await new ArtBUS().Search(keyword);
+            dataGridView1.BeginInvoke(new MethodInvoker(delegate { dataGridView1.DataSource = artItems; })); // set asynchronous datasource
+            
         }
 
         private async void addButton_Click(object sender, EventArgs e)

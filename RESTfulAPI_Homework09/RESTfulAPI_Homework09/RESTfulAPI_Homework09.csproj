@@ -88,6 +88,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\RESTfulController.cs" />
     <Compile Include="DAL\ArtDAO.cs" />
+    <Compile Include="DAL\UserDAO.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -96,6 +97,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ArtDB.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Models\LoginUser.cs" />
+    <Compile Include="Models\RegisterUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
