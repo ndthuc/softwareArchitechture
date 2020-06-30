@@ -1,5 +1,3 @@
-
-
 const cors = "https://cors-anywhere.herokuapp.com/";
 const domain = "http://tin415de01.gear.host/"
 
